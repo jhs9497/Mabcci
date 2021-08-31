@@ -11,7 +11,6 @@ export const OOTDFeedApi = async (category, page, nickname) => {
 export const SearchedOOTDFeedApi = async (keyword, page) => {
   const SearchedOOTDFeedUrl = `/api/ootds?search=${keyword}&filter=hashtag&size=20&page=${page}`;
   const response = await instance.get(SearchedOOTDFeedUrl);
-  console.log(response);
   return response;
 };
 

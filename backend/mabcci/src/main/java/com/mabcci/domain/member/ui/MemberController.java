@@ -98,6 +98,7 @@ public class MemberController {
     public ResponseEntity<?> update(@Valid @ModelAttribute MemberUpdateRequest request,
                                     @PathVariable("originalNickname") Nickname originalNickname,
                                     @RequestParam("picture") MultipartFile picture) {
+        System.err.println("!!!!!!!!!!!!!!!!!!!!!!!");
         log.info("requset : {}", request.toString());
         log.info("originalNickname : {}", originalNickname.toString());
         log.info("multipart : {}", picture.toString());

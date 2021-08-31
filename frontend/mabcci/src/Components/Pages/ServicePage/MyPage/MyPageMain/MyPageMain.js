@@ -38,6 +38,7 @@ function MyPageMain() {
   useEffect(async () => {
     dispatch(NavCategory('mypage'));
     const res = await MypageReadApi(nickname);
+    console.log(res);
     if (res.myInfo.picture !== null) {
       res.myInfo.picture = baseUrl + res.myInfo.picture;
     }

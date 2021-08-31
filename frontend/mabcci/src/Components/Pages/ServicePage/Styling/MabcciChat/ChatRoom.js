@@ -87,12 +87,7 @@ const ChatRoom = ({ setChatMenu, chatMenu, message, setMessage, chatInfo }) => {
               />
             </div>
             <div className="you">
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi
-                perferendis voluptatum inventore ullam aut hic doloribus
-                nesciunt deleniti quo nobis ipsam et vitae mollitia atque
-                corporis veritatis, a maxime dolores.
-              </p>
+              <p>안녕하세요</p>
             </div>
           </div>
           <div className="you-box">
@@ -101,11 +96,11 @@ const ChatRoom = ({ setChatMenu, chatMenu, message, setMessage, chatInfo }) => {
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5e9ZV_LPO-_MZ8OX1FA3F-dzDUqkuKCtv8A&usqp=CAU"
               alt=""
             />
-            <div className="you">
+            {/* <div className="you">
               <p>Lorem ipsum dolois, a maxime dolores.</p>
-            </div>
+            </div> */}
           </div>
-          <div className="me-box">
+          {/* <div className="me-box">
             <div className="me">
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -126,7 +121,7 @@ const ChatRoom = ({ setChatMenu, chatMenu, message, setMessage, chatInfo }) => {
                 sint illo.
               </p>
             </div>
-          </div>
+          </div> */}
         </div>
         <div className="chat-input">
           <Link to="/makesuggestion" className="link-suggest">

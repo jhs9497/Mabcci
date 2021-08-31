@@ -3,6 +3,7 @@ import { useParams, useHistory, Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Pagination } from 'swiper/core';
 import { AiOutlineHeart, AiFillHeart } from 'react-icons/ai';
+import { useDispatch } from 'react-redux';
 import { baseUrl } from '../../../../../API/ApiUrl';
 import {
   OOTDDetailApi,
@@ -12,8 +13,10 @@ import 'swiper/swiper.min.css';
 import 'swiper/components/pagination/pagination.min.css';
 import OOTDDeleteApi from '../../../../../API/OOTDAPI/OOTDDeleteApi';
 import 기본프로필 from '../../../../../Asset/Images/기본프로필.jpg';
+import OOTDLike from '../../../../../Redux/Reducers';
 
 const OOTDContent = props => {
+  const dispatch = useDispatch();
   const history = useHistory();
   const { ootdId, writerNickname, userInfo } = props;
   const [writer, setWriter] = useState({
@@ -71,10 +74,16 @@ const OOTDContent = props => {
   const likeHandler = async () => {
     const responseLike = await OOTDLikeApi(detail.id, userInfo.nickname);
     const responseDetail = await OOTDDetailApi(detail.id, userInfo.nickname);
+
+    if (myLike)
+      setDetail({ ...detail, likeCount: Number(detail.likeCount) - 1 });
+    else setDetail({ ...detail, likeCount: Number(detail.likeCount) + 1 });
+
+    window.location.replace(`/OOTD/${detail.id}/${writer.nickname}`);
+
+    // dispatch(OOTDLike({ ootdcontentId: detail.id, ootdcontentLike: myLike }));
+
     setMyLike(!myLike);
-    if (responseDetail.status === 200) {
-      setDetail({ ...detail, likeCount: responseDetail.detail.likeCount });
-    }
   };
 
   return (

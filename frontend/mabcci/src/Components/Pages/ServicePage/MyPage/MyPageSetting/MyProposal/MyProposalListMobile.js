@@ -53,7 +53,8 @@ const MyPageProposalListMobile = props => {
       setReviewDetailBox(true);
     };
 
-  const goProposalDetail = (id) => {
+  const goProposalDetail = (e) => {
+    const id = e.target.id
     history.push(`/suggestion/${id}`)
   }
 

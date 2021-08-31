@@ -68,7 +68,6 @@ const OOTDFeed = ({
       try {
         dispatch(OOTDFilterState('search'));
         const word = hashtag || keyword;
-        console.log(word);
         const response = await SearchedOOTDFeedApi(word, page);
         const { ootdList, totalPages } = response.data;
         setMaxPage(totalPages);

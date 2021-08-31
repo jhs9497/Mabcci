@@ -1,5 +1,5 @@
 import { PopularMabcciUrl } from '../ApiUrl';
-import instance from '../indexMockSeongae';
+import instance from '../index';
 
 const PopularMabcciApi = async () => {
   try {

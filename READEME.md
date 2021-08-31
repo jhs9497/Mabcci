@@ -88,9 +88,7 @@ git commit -m "feat(아이디):OOO 클래스 계산 기능 구현"
 
 
 
-# 📆 기술 회고록
+# 📆 번다운차트
 
-## 프론트엔드
-
-##  백엔드
+![mabcci 번다운차트](mabcci%20%EB%B2%88%EB%8B%A4%EC%9A%B4%EC%B0%A8%ED%8A%B8.PNG)
 

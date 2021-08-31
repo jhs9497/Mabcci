@@ -129,12 +129,14 @@ const MabcciSearch = () => {
                   <h6 key={category}># {category} </h6>
                 ))}
               </div>
-              <BiEdit
-                className="styling-mabcci-apply"
-                size="40"
-                onClick={() => stylingApplyHandler(mabcci.nickname)}
-                onKeyDown={() => stylingApplyHandler(mabcci.nickname)}
-              />
+              <Link to="/chat">
+                <BiEdit
+                  className="styling-mabcci-apply"
+                  size="40"
+                  onClick={() => stylingApplyHandler(mabcci.nickname)}
+                  onKeyDown={() => stylingApplyHandler(mabcci.nickname)}
+                />
+              </Link>
             </div>
           ))}
       </article>

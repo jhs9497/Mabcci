@@ -3,6 +3,7 @@ import {
   OOTD_DETAIL,
   OOTD_FILTERING,
   OOTD_FILTER_STATE,
+  OOTD_LIKE,
 } from '../Type/OOTDType';
 
 export const OOTDAll = data => {
@@ -29,5 +30,12 @@ export const OOTDFilterState = data => {
 export const OOTDDetail = () => {
   return {
     type: OOTD_DETAIL,
+  };
+};
+
+export const OOTDLike = data => {
+  return {
+    type: OOTD_LIKE,
+    payload: data,
   };
 };

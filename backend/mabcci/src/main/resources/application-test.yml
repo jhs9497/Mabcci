@@ -14,7 +14,7 @@ spring:
     properties:
       hibernate:
         default_batch_fetch_size: 1000
-        enable_lazy_load_no_trans: true
+#        enable_lazy_load_no_trans: true
         format_sql: true
 path:
   upload: "/images"

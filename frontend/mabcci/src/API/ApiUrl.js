@@ -1,4 +1,5 @@
-export const baseUrl = '/13.124.127.111:8080';
+// export const baseUrl = '/13.124.127.111:8080';
+export const baseUrl = 'http://localhost:8080';
 
 /* AuthAPI Url */
 export const LoginUrl = '/auth/login';
